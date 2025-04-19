@@ -5,5 +5,26 @@
 </head>
 <body>
     <h1>Calendar working</h1>
+    <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Start</th>
+            <th>End</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- loop here to create rows -->
+          
+          {% for appointment in appointments %}
+            <span>{{ appointment.name }}</span>
+                <span>{{ appointment.start }}</span>
+                <span>{{ appointment.end }}</span>
+            {% endfor %}
+            
+          <!-- use strftime to format date objects -->
+          <!-- loop here to create rows -->
+        </tbody>
+      </table>
 </body>
 </html>
